@@ -1,0 +1,25 @@
+model:
+  d_model: 256
+  num_heads: 8
+  num_layers: 3
+  d_ff: 1024
+  dropout: 0.15
+  use_positional_encoding: true
+  use_residual: true
+
+training:
+  batch_size: 256
+  learning_rate: 0.0005
+  num_epochs: 20
+  warmup_steps: 8000
+  max_seq_length: 128
+  gradient_clip: 1.0
+  weight_decay: 0.015
+
+data:
+  dataset_name: "iwslt2017"
+  source_lang: "en"
+  target_lang: "de"
+  max_vocab_size: 10000
+  train_split: "train"
+  val_split: "validation"
